@@ -19,7 +19,7 @@ def show_all_patients_page(request):
 
     context['filtered_patients'] = filtered_patients
 
-    paginated_filtered_patients = Paginator(filtered_patients.qs, 2)
+    paginated_filtered_patients = Paginator(filtered_patients.qs, 5)
     page_number = request.GET.get('page')
     patients_page_obj = paginated_filtered_patients.get_page(page_number)
 
